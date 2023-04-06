@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "admin_details",
+  "info": {
+    "singularName": "admin-detail",
+    "pluralName": "admin-details",
+    "displayName": "adminDetail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Firstname": {
+      "type": "string",
+      "required": true
+    },
+    "Lastname": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "Password": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
