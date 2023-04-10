@@ -17,7 +17,8 @@ const App = () => {
     <div>
       <Switch>
         <Route path={`/plugins/${pluginId}`} component={HomePage} exact />
-        {/* <Route path={`/plugins/admin-panel/admin-control`} component={adminControl} exact /> */}
+        <Route path={`/plugins/admin-panel/admin-control`} component={adminControl} exact />
+        {/* <Route path={`/create-user`} component={adminControl} exact /> */}
         <Route component={NotFound} />
       </Switch>
     </div>

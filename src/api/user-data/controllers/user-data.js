@@ -1,8 +1,8 @@
 'use strict';
 
-/**
- * user-data controller
- */
+const getLoginData = () => {
+    console.log("data received")
+}
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

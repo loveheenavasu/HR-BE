@@ -1,9 +1,11 @@
-'use strict';
+"use strict";
 
-/**
- * user-data router
- */
+// {
+//     anything
+// }
 
-const { createCoreRouter } = require('@strapi/strapi').factories;
+const { createCoreRouter } = require("@strapi/strapi").factories;
 
-module.exports = createCoreRouter('api::user-data.user-data');
+module.exports = createCoreRouter("api::user-data.user-data", (ctx)=>{
+    console.log("77777777777777777",ctx)
+} );
