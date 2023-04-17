@@ -26,6 +26,9 @@
     "Password": {
       "type": "string",
       "required": true
+    },
+    "Role": {
+      "type": "string"
     }
   }
 }

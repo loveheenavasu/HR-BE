@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "public_holidays",
+  "info": {
+    "singularName": "public-holiday",
+    "pluralName": "public-holidays",
+    "displayName": "public_holidays",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "holiday_name": {
+      "type": "string"
+    },
+    "holiday_date": {
+      "type": "string"
+    },
+    "holiday_time": {
+      "type": "string"
+    },
+    "holiday_type": {
+      "type": "string"
+    }
+  }
+}

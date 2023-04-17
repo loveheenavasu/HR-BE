@@ -1,0 +1,15 @@
+
+{
+  "kind": "collectionType",
+  "collectionName": "getdatas",
+  "info": {
+    "singularName": "getdata",
+    "pluralName": "getdatas",
+    "displayName": "getdata"
+  },
+  "options": {
+    "draftAndPublish": false,
+    "comment": ""
+  },
+  "attributes": {}
+}

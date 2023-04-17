@@ -16,8 +16,6 @@ import {
 } from "@strapi/design-system";
 import { useState } from "react";
 import "../../style.css";
-// const jwt = require("jsonwebtoken");
-// import { Information } from "@strapi/icons";
 
 const adminControl = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,8 +28,12 @@ const adminControl = () => {
     email: "",
     password: "",
     phone_number: "",
-    role: "manager",
+    role: "",
   });
+
+  React.useEffect(() => {
+    setContent({ ...content, role: checked ? "manager" : "user" });
+  }, [checked]);
 
   const valueHander = (e) => {
     setContent({
@@ -40,25 +42,22 @@ const adminControl = () => {
     });
   };
 
-  const frontendData = () => {
-    fetch("http://localhost:1337/login",)
-    .then((response) => response.json())
-    .then((data)=>{
-      console.log(data,"data from frontend")
-    })
-  }
-  frontendData()
+  // const frontendData = () => {
+  //   fetch("http://localhost:1337/login",)
+  //   .then((response) => response.json())
+  //   .then((data)=>{
+  //     console.log(data,"data from frontend")
+  //   })
+  // }
+  // frontendData()
 
   const submitHandler = (e) => {
     e.preventDefault();
-    
-    // const token = jwt.sign({ data: content }, "vicky-harpreet");
-  
-    fetch("http://localhost:1337/api/users-data", {
+
+    fetch("http://localhost:1337/api/userdetails", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
-        // "Authorization": `Bearer ${token}` // add the JWT token to the headers
       },
       body: JSON.stringify({ data: content }),
     })
@@ -70,7 +69,7 @@ const adminControl = () => {
         console.log("Error:", error);
       });
   };
-
+  console.log(content, "here is the data");
   return (
     <>
       {isVisible && (
@@ -180,7 +179,6 @@ const adminControl = () => {
         </ModalLayout>
       )}
       <div>
-        <h1>{/* welcome to the admin control panel */}</h1>
         <div>
           <div>
             <label>

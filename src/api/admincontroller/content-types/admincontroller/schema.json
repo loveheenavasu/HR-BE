@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "admincontrollers",
+  "info": {
+    "singularName": "admincontroller",
+    "pluralName": "admincontrollers",
+    "displayName": "admincontroller"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "password": {
+      "type": "string",
+      "maxLength": 10,
+      "minLength": 6
+    },
+    "role": {
+      "type": "string"
+    }
+  }
+}

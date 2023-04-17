@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employee_holidays",
+  "info": {
+    "singularName": "employee-holiday",
+    "pluralName": "employee-holidays",
+    "displayName": "employee_holidays"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "employee_id": {
+      "type": "string",
+      "unique": true
+    },
+    "holiday_data": {
+      "type": "string"
+    },
+    "holiday_remarks": {
+      "type": "string"
+    },
+    "holiday_type": {
+      "type": "string"
+    }
+  }
+}
