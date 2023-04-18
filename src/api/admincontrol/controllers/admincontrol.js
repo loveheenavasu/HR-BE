@@ -8,11 +8,15 @@ module.exports = {
   adminLogin: async (ctx, next) => {
     try {
       const { Email, Password } = ctx.request.body;
-      console.log(Email, Password, "email password");
+      // console.log(Email, Password, "email password");
+      
+      // const user = await strapi.query('admincontroller').findOne({ Email})
+      
       const detail = await strapi.entityService.findMany(
         "api::admincontroller.admincontroller"
       );
-      const filteredEntries = detail.filter((entry) => entry.email);
+      const filteredEntries = detail.filter((entry) => entry.email); 
+      // console.log(user,"this is the user")
 
       if (filteredEntries.length > 0) {
         const entry = filteredEntries[0];
