@@ -27,8 +27,7 @@ import {
 //   CardFooter,
 //   Heading,
 // } from "@chakra-ui/react";
-import { useHistory } from "react-router-dom";
-
+import { useHistory } from "react-router-dom"
 const HomePage = () => {
   const history = useHistory([]);
   const [inputData, setInputData] = useState({
@@ -99,7 +98,7 @@ const HomePage = () => {
     });
   };
   return (
-    <div>
+    <div className="rdxDiv">
       {/* <Card>
         <CardHeader>
           <Heading size="md">Welcome to the admin panel</Heading>
@@ -137,7 +136,7 @@ const HomePage = () => {
           </form>
         </CardBody>
       </Card> */}
-
+      {/* <div className="mainDiv">
       <Box background="neutral100">
         <BaseHeaderLayout
           title="Welcome to the admin panel"
@@ -148,7 +147,7 @@ const HomePage = () => {
       <div className="loginForm">
         <div className="formWrapper  adminBox">
           <form onSubmit={checkHandler}>
-            <div>
+            <>
               <Field name="Email">
                 <Flex direction="column" alignItems="flex-start" gap={1}>
                   <FieldInput
@@ -160,8 +159,8 @@ const HomePage = () => {
                   <FieldHint />
                 </Flex>
               </Field>
-            </div>
-            <div>
+            </>
+            <>
               <Field name="Password">
                 <Flex direction="column" alignItems="flex-start" gap={1}>
                   <FieldInput
@@ -173,7 +172,7 @@ const HomePage = () => {
                   <FieldHint />
                 </Flex>
               </Field>
-            </div>
+            </>
             <div>
               <Button variant="secondary" type="submit  ">
                 AdminLogin
@@ -182,6 +181,94 @@ const HomePage = () => {
           </form>
         </div>
       </div>
+    </div> */}
+
+      <Card
+        className="headerCard"
+      >
+          <BaseHeaderLayout
+            title="Welcome to the admin panel"
+            subtitle={<Breadcrumbs label="folders"></Breadcrumbs>}
+            as="h2"
+          />
+      </Card>
+
+      <Card
+        className="bodyCard"
+        >
+            <form onSubmit={checkHandler}>
+            <Field name="Email">
+              <Flex direction="column" alignItems="flex-start" gap={1}>
+                <FieldInput
+                  type={"Email"}
+                  placeholder="Enter Your Email"
+                  value={inputData.Email}
+                  onChange={(e) => valueHandler(e)}
+                />
+                <FieldHint />
+              </Flex>
+            </Field>
+            <Field name="Password">
+              <Flex direction="column" alignItems="flex-start" gap={1}>
+                <FieldInput
+                  type={"password"}
+                  placeholder="Enter Your Password"
+                  value={inputData.Password}
+                  onChange={(e) => valueHandler(e)}
+                />
+                <FieldHint />
+              </Flex>
+            </Field>
+            <div>
+              <Button variant="secondary" type="submit  ">
+                AdminLogin
+              </Button>
+            </div>
+          </form>
+      </Card>
+
+      {/* <div style={{ display: "flex", flexDirection: "column" }}>
+        <div style={{ color: "#ff0000" }}>
+          <Box background="neutral100">
+            <BaseHeaderLayout
+              title="Welcome to the admin panel"
+              subtitle={<Breadcrumbs label="folders"></Breadcrumbs>}
+              as="h2"
+            />
+          </Box>
+        </div>
+        <div style={{ color: "green" }} className="card">
+          <form onSubmit={checkHandler}>
+            <Field name="Email">
+              <Flex direction="column" alignItems="flex-start" gap={1}>
+                <FieldInput
+                  type={"Email"}
+                  placeholder="Enter Your Email"
+                  value={inputData.Email}
+                  onChange={(e) => valueHandler(e)}
+                />
+                <FieldHint />
+              </Flex>
+            </Field>
+            <Field name="Password">
+              <Flex direction="column" alignItems="flex-start" gap={1}>
+                <FieldInput
+                  type={"password"}
+                  placeholder="Enter Your Password"
+                  value={inputData.Password}
+                  onChange={(e) => valueHandler(e)}
+                />
+                <FieldHint />
+              </Flex>
+            </Field>
+            <div>
+              <Button variant="secondary" type="submit  ">
+                AdminLogin
+              </Button>
+            </div>
+          </form>
+        </div>
+      </div> */}
     </div>
   );
 };
